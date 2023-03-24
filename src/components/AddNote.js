@@ -17,7 +17,7 @@ const AddNote = () => {
         <div className='container my-3'>
             <h2>Add Note</h2>
             <form className='my-3'>
-                <div className='d-flex justify-content-between mx-3'>
+                <div className='d-flex justify-content-between'>
                     <div className="form-group">
                         <label htmlFor="title">Title</label>
                         <input type="text" className="form-control" id="title" name='title' aria-describedby="emailHelp" onChange={handleChange} />
