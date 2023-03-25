@@ -11,7 +11,7 @@ const AddNote = () => {
     }
     const handleChange = (e) => {
         e.preventDefault();
-        setNote({ ...note, [e.target.name]: [e.target.value] });
+        setNote({ ...note, [e.target.name]: e.target.value });
     }
     return (
         <div className='container my-3'>
