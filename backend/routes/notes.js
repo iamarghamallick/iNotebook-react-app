@@ -54,7 +54,7 @@ router.put('/updatenote/:id', fetchuser, async (req, res) => {
 
         if(note.user.toString() !== req.user.id) { return res.status(401).send("Authentication invalid")}
 
-        note = await Note.findOneAndUpdate(req.params.id, {$set: newNote}, {new: true});
+        note = await Note.findByIdAndUpdate(req.params.id, {$set: newNote}, {new: true});
         res.json({note});
     } catch (err) {
         console.log(err.message);
