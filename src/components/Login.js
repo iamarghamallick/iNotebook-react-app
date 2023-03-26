@@ -29,6 +29,8 @@ const Login = (props) => {
         }
     }
     return (
+        <>
+        <h2 className='my-3'>Login to continue using iNotebook</h2>
         <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlFor="exampleInputEmail1">Email address</label>
@@ -41,6 +43,7 @@ const Login = (props) => {
             </div>
             <button type="submit" className="btn btn-primary">Login</button>
         </form>
+        </>
     )
 }
 

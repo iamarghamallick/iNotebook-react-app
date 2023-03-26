@@ -61,7 +61,7 @@ const NoteState = (props) => {
     const editNote = async (id, title, description, tag) => {
         console.log(id);
         console.log(title);
-        // API call
+        // API call ================================== Not working properly (to be fixed) ========
         const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
             method: 'PUT',
             headers: {
@@ -71,10 +71,10 @@ const NoteState = (props) => {
             body: JSON.stringify({title, description, tag})
         })
 
-        const json = await response.json();
-        console.log(json);
+        const updatedNote = await response.json();
+        console.log(updatedNote);
 
-        // Logic to edit a note
+        // Logic to edit a note in the client side
         const newNotes = JSON.parse(JSON.stringify(notes))
         for (let index = 0; index < newNotes.length; index++) {
             const element = newNotes[index];
