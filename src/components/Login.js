@@ -25,7 +25,7 @@ const Login = (props) => {
             props.showAlert("Logged in sucessfully", "success");
             nevigate("/");
         } else {
-            alert("Invalid credentials");
+            props.showAlert("Invalid credentials", "danger");
         }
     }
     return (
