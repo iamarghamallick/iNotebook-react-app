@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+## Hosted on [Netlify](https://app.netlify.com/) at [iNotebook-React-App](https://inotebook-react-app.netlify.app/) -> branch: myversion
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
