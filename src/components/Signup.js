@@ -21,16 +21,17 @@ const Signup = (props) => {
         console.log(json);
         if (json.success){
             // Save the auth token and redirect
-            localStorage.setItem('token', json.authtoken); 
-            props.showAlert("Account created sucessfully", "success");
-            nevigate("/");
+            // localStorage.setItem('token', json.authtoken); 
+            props.showAlert("Account Created Sucessfully", "success");
+            nevigate("/login");
         }
         else{
-            props.showAlert("Invalid details", "danger");
+            props.showAlert("Invalid Details", "danger");
         }
     }
     return (
-        <>
+        <div className='my-3'>
+            <h2>Create an account to use iNotebook</h2>
             <form>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
@@ -51,7 +52,7 @@ const Signup = (props) => {
                 </div>
                 <button onClick={handleSubmit} type="submit" className="btn btn-primary my-3">Signup</button>
             </form>
-        </>
+        </div>
     )
 }
 
