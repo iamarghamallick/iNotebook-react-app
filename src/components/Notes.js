@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Notes = (props) => {
     let nevigate = useNavigate();
-    const { showAlert } = props;
+    const { showAlert, showLoading } = props;
     const context = useContext(noteContext);
     const { notes, getNotes, editNote, getUser } = context;
     useEffect(() => {
@@ -27,9 +27,11 @@ const Notes = (props) => {
         setNote({ id: currentNote._id, etitle: currentNote.title, edescription: currentNote.description, etag: currentNote.tag })
     }
 
-    const handleClick = () => {
-        editNote(note.id, note.etitle, note.edescription, note.etag)
+    const handleClick = async () => {
+        props.showLoading(true)
         refClose.current.click();
+        await editNote(note.id, note.etitle, note.edescription, note.etag)
+        props.showLoading(false)
         props.showAlert("Updated successfully", "success");
     }
 
@@ -39,7 +41,7 @@ const Notes = (props) => {
 
     return (
         <>
-            <AddNote showAlert={showAlert} />
+            <AddNote showAlert={showAlert} showLoading={showLoading} />
             <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
             </button>

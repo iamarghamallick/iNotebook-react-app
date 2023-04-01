@@ -7,6 +7,7 @@ const Login = (props) => {
     let nevigate = useNavigate();
 
     const handleSubmit = async (e) => {
+        props.showLoading(true)
         // const host = "http://localhost:5000"
         const host = "https://inotebook-backend-9rjg.onrender.com"
         e.preventDefault();
@@ -22,10 +23,12 @@ const Login = (props) => {
         if (json.success){
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken); 
+            props.showLoading(false)
             props.showAlert("Logged in sucessfully", "success");
             nevigate("/");
         }
         else{
+            props.showLoading(false)
             props.showAlert("Invalid credentials", "danger");
         }
     }
