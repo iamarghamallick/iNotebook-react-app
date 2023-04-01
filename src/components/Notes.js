@@ -8,10 +8,11 @@ const Notes = (props) => {
     let nevigate = useNavigate();
     const { showAlert } = props;
     const context = useContext(noteContext);
-    const { notes, getNotes, editNote } = context;
+    const { notes, getNotes, editNote, getUser } = context;
     useEffect(() => {
         if (localStorage.getItem('token')) {
             getNotes()
+            getUser()
         } else {
             nevigate('/login')
         }
@@ -26,7 +27,7 @@ const Notes = (props) => {
         setNote({ id: currentNote._id, etitle: currentNote.title, edescription: currentNote.description, etag: currentNote.tag })
     }
 
-    const handleClick = (e) => {
+    const handleClick = () => {
         editNote(note.id, note.etitle, note.edescription, note.etag)
         refClose.current.click();
         props.showAlert("Updated successfully", "success");
@@ -75,7 +76,7 @@ const Notes = (props) => {
             </div>
 
             <div className="row my-3">
-                <h2>You Notes</h2>
+                <h2>Your Notes</h2>
                 <div className="container mx-2">
                     {notes.length === 0 && 'No notes to display'}
                 </div>
