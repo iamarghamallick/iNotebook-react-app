@@ -80,7 +80,7 @@ const Notes = (props) => {
             <div className="row my-3">
                 <h2>Your Notes</h2>
                 <div className="container mx-2">
-                    {notes.length === 0 && 'No notes to display'}
+                    {notes.length === 0 && 'Fetching your notes from the database...'}
                 </div>
                 {notes.map((note) => {
                     return <Noteitem key={note._id} updateNote={updateNote} note={note} showAlert={showAlert} />
