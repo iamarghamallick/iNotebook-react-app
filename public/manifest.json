@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "iNotebook",
+  "name": "Your Notes Secured on the Cloud",
   "icons": [],
   "start_url": ".",
   "display": "standalone",
