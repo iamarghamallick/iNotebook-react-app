@@ -14,6 +14,14 @@ code {
     monospace;
 }
 
-i{
+i {
   cursor: pointer;
+  background-color: #040025d6;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.modal-content {
+  background-color: #2f3841;
+  border: 1px solid blue;
 }

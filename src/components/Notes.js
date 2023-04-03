@@ -66,7 +66,6 @@ const Notes = (props) => {
                                     <label htmlFor="tag" className="form-label">Tag</label>
                                     <input type="text" className="form-control" id="etag" name="etag" value={note.etag} onChange={onChange} />
                                 </div>
-
                             </form>
                         </div>
                         <div className="modal-footer">
