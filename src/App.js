@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import { useState } from 'react';
 import Spinner from './components/Spinner';
+import Userprofile from './components/Userprofile';
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -39,6 +40,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/login" element={<Login showAlert={showAlert} showLoading={showLoading} />} />
               <Route path="/signup" element={<Signup showAlert={showAlert} showLoading={showLoading} />} />
+              <Route path="/userprofile" element={<Userprofile />} />
             </Routes>
           </div>
         </Router>

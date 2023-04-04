@@ -14,9 +14,6 @@ const Navbar = (props) => {
         props.showAlert("Logged out successfully", 'success');
         nevigate('/login');
     }
-    const handleUser = (e) => {
-        e.preventDefault();
-    }
     let location = useLocation();
     return (
         <>
@@ -42,7 +39,7 @@ const Navbar = (props) => {
                                 <Link className="btn btn-primary mx-1" to="/signup" role="button">Signup</Link>
                             </form>
                             : <form className="d-flex">
-                                <button onClick={handleUser} className="btn btn-dark mx-1 border border-primary"><FontAwesomeIcon icon={faUser} /> &nbsp; {user.name}</button>
+                                <Link to='/userprofile' className="btn btn-dark mx-1 border border-primary"><FontAwesomeIcon icon={faUser} /> &nbsp; {user.name}</Link>
                                 <Link onClick={handleLogout} className="btn btn-primary mx-1" to="/login" role="button">Logout</Link>
                             </form>}
                     </div>

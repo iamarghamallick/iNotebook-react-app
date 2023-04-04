@@ -56,15 +56,15 @@ const Notes = (props) => {
                             <form className="my-3">
                                 <div className="mb-3">
                                     <label htmlFor="title" className="form-label">Title</label>
-                                    <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} minLength={5} required />
+                                    <input type="text" className="form-control text-light" id="etitle" style={{background: "#1f1f4b", border: "1px solid blue"}} name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} minLength={5} required />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="description" className="form-label">Description</label>
-                                    <input type="text" className="form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required />
+                                    <input type="text" className="form-control text-light" id="edescription" style={{background: "#1f1f4b", border: "1px solid blue"}} name="edescription" value={note.edescription} onChange={onChange} minLength={5} required />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="tag" className="form-label">Tag</label>
-                                    <input type="text" className="form-control" id="etag" name="etag" value={note.etag} onChange={onChange} />
+                                    <input type="text" className="form-control text-light" id="etag" style={{background: "#1f1f4b", border: "1px solid blue"}} name="etag" value={note.etag} onChange={onChange} />
                                 </div>
                             </form>
                         </div>
@@ -77,9 +77,9 @@ const Notes = (props) => {
             </div>
 
             <div className="row my-3">
-                <h2>Your Notes</h2>
+                <h2>Your Notes ({notes.length})</h2>
                 <div className="container mx-2">
-                    {notes.length === 0 && 'Fetching your notes from the database...'}
+                    {notes.length === 0 && <h6>Fetching your notes from the database...</h6>}
                 </div>
                 {notes.map((note) => {
                     return <Noteitem key={note._id} updateNote={updateNote} note={note} showAlert={showAlert} />

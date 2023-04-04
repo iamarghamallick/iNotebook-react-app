@@ -23,15 +23,15 @@ const AddNote = (props) => {
         <div className="container my-3 d-flex">
             <form className="my-3" style={{ "width": "100%" }}>
                 <div className="mb-3">
-                    <input type="text" placeholder='Title' className="form-control-lg bg-dark text-light" id="title" style={{ "width": "100%" }} name="title" aria-describedby="emailHelp" value={note.title} onChange={onChange} minLength={5} required />
+                    <input type="text" placeholder='Add New - Title' className="form-control-lg text-light" id="title" style={{ width: "100%", background: "#1f1f4b", border:"1px solid blue" }} name="title" aria-describedby="emailHelp" value={note.title} onChange={onChange} minLength={5} required />
                 </div>
                 <div className="form-outline mb-3">
-                    <textarea type="text" placeholder='Description' rows={3} className="form-contro bg-dark text-light px-2" id="description" style={{ "width": "100%" }} name="description" value={note.description} onChange={onChange} minLength={5} required ></textarea>
+                    <textarea type="text" placeholder='Description' rows={3} className="form-control text-light px-2" id="description" style={{ "width": "100%", background: "#1f1f4b", border:"1px solid blue" }} name="description" value={note.description} onChange={onChange} minLength={5} required ></textarea>
                 </div>
                 <div className="mb-3">
-                    <input type="text" placeholder='Tag' className="form-control bg-dark text-light" id="tag" style={{ "width": "100%" }} name="tag" value={note.tag} onChange={onChange} minLength={5} required />
+                    <input type="text" placeholder='Tag' className="form-control text-light" id="tag" style={{ "width": "100%", background: "#1f1f4b", border:"1px solid blue" }} name="tag" value={note.tag} onChange={onChange} minLength={5} required />
                 </div>
-                <button disabled={note.title.length < 5 || note.description.length < 5} type="submit" className="btn btn-primary" onClick={handleClick}>Add New</button>
+                <button disabled={note.title.length < 5 || note.description.length < 5} type="submit" className="btn btn-primary px-4" onClick={handleClick}>Save</button>
             </form>
         </div>
     )

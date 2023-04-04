@@ -25,3 +25,8 @@ i {
   background-color: #2f3841;
   border: 1px solid blue;
 }
+
+::placeholder {
+  color: rgb(212, 212, 212);
+  opacity: 1;
+}
