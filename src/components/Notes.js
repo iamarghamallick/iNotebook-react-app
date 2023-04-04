@@ -60,7 +60,7 @@ const Notes = (props) => {
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="description" className="form-label">Description</label>
-                                    <input type="text" className="form-control text-light" id="edescription" style={{background: "#1f1f4b", border: "1px solid blue"}} name="edescription" value={note.edescription} onChange={onChange} minLength={5} required />
+                                    <textarea rows={5} type="text" className="form-control text-light" id="edescription" style={{background: "#1f1f4b", border: "1px solid blue"}} name="edescription" value={note.edescription} onChange={onChange} minLength={5} required />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="tag" className="form-label">Tag</label>
@@ -70,7 +70,7 @@ const Notes = (props) => {
                         </div>
                         <div className="modal-footer">
                             <button ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button disabled={note.etitle.length < 5 || note.edescription.length < 5} onClick={handleClick} type="button" className="btn btn-primary">Update Note</button>
+                            <button disabled={note.etitle.length < 5 || note.edescription.length < 5} onClick={handleClick} type="button" className="btn btn-primary">Update</button>
                         </div>
                     </div>
                 </div>

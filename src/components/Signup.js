@@ -40,24 +40,24 @@ const Signup = (props) => {
             <form>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
-                    <input type="text" className="form-control" id="email" onChange={handleChange} name='name' minLength={5} required/>
+                    <input placeholder='Enter your name' type="text" className="form-control text-light my-1" id="email" style={{background: "#1f1f4b", border:"1px solid blue" }} onChange={handleChange} name='name' minLength={5} required/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" onChange={handleChange} name='email' />
+                    <input placeholder='Enter your email' type="email" className="form-control text-light my-1" id="email" aria-describedby="emailHelp" onChange={handleChange} name='email' style={{background: "#1f1f4b", border:"1px solid blue" }} />
                     <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" className="form-control" id="password" onChange={handleChange} name='password'  minLength={5} required/>
+                    <input placeholder='Enter a strong password' type="password" className="form-control text-light my-1" id="password" onChange={handleChange} name='password'  minLength={5} style={{background: "#1f1f4b", border:"1px solid blue" }} required/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Confirm Password</label>
-                    <input type="password" className="form-control" id="cpassword" onChange={handleChange} name='cpassword'  minLength={5} required/>
+                    <input placeholder='Password must be matched' type="password" className="form-control text-light my-1" id="cpassword" onChange={handleChange} name='cpassword'  minLength={5} style={{background: "#1f1f4b", border:"1px solid blue" }} required/>
                 </div>
                 <button onClick={handleSubmit} type="submit" className="btn btn-primary my-3">Signup</button>
             </form>
-            <p className='my-2'>Already have an Account? <Link to='/login' className='text-warning'>Login to iNotebook</Link></p>
+            <p className='my-2'>Already have an Account? <Link to='/login' className='text-warning'>Click here to Login</Link></p>
         </div>
     )
 }
