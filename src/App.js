@@ -10,6 +10,7 @@ import Login from './components/Login';
 import { useState } from 'react';
 import Spinner from './components/Spinner';
 import Userprofile from './components/Userprofile';
+import Footer from './components/Footer';
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -43,6 +44,7 @@ function App() {
               <Route path="/userprofile" element={<Userprofile />} />
             </Routes>
           </div>
+          <Footer />
         </Router>
       </NoteState>
     </>
