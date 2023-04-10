@@ -13,7 +13,8 @@ const Noteitem = (props) => {
                 <div className="card-body" style={{"backgroundColor":"#001f4e", "borderRadius": "20px"}}>
                     <div className="align-items-center">
                         <h5 className="card-title">{note.title}</h5>
-                        <p className="card-text">{note.description}</p>
+                        {/* <p className="card-text">{note.description}</p> */}
+                        <textarea className='text-light' style={{background: "#001f4e", width: "100%", borderRadius: "10px", padding: "5px" }} rows={10} value={note.description} disabled></textarea>
                         <p className="card-text text-warning"><FontAwesomeIcon icon={faHashtag} /> {note.tag}</p>
                     </div>
                     <div className="d-flex align-items-center mt-3 justify-content-center">

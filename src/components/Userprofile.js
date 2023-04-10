@@ -12,9 +12,9 @@ const Userprofile = () => {
             <div className="card text-light" style={{ "background":"#4f488ad6" }}>
                 <img src="user.png" className="card-img-top p-2 rounded-circle" alt="User Badge" style={{height: "200px", width:"200px"}}/>
                 <div className="card-body">
-                    <h5 className="card-title my-3"><span className='text-warning'>Welcome,</span> {user.name}</h5>
-                    <h6 className="card-text my-3">Your Email: <span className='text-warning'>{user.email}</span></h6>
-                    <h6 className="card-text my-3">Date joined: <span className='text-warning'>{d.toString()}</span></h6>
+                    <h5 className="card-title my-3"><span className='text-warning'>Hello,</span> {user.name}</h5>
+                    <h6 className="card-text my-3">Email: <span className='text-warning'>{user.email}</span></h6>
+                    <h6 className="card-text my-3">User since <span className='text-warning'>{d.toString()}</span></h6>
                 </div>
             </div>
         </div>

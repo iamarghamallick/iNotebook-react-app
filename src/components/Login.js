@@ -51,7 +51,7 @@ const Login = (props) => {
                     <input placeholder='Enter your password' type="password" className="form-control text-light" value={credentials.password} onChange={onChange} name="password" id="password" style={{background: "#1f1f4b", border:"1px solid blue" }}/>
                 </div>
 
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Login</button>
                 <p className='my-2'>Not an user? <Link to='/signup' className='text-warning'>Create an Account</Link></p>
             </form>
         </div>

@@ -30,3 +30,26 @@ i {
   color: rgb(212, 212, 212);
   opacity: 1;
 }
+
+/* customizing scrollbar  */
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #001f4e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6c63ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+/* customizing scrollbar ends here */
