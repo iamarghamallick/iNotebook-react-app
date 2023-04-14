@@ -10,7 +10,7 @@ export const Alert = (props) => {
     }
     return (
         <div style={{ height: '50px' }}>
-            {!props.alert && localStorage.getItem('token') && <h2 className='container'>Welcome back,</h2>}
+            {!props.alert && localStorage.getItem('token') && <h2 className='container'>Welcome back!</h2>}
             {props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
                 <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
             </div>}

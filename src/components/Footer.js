@@ -5,9 +5,6 @@ import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-ic
 
 const Footer = () => {
     return (
-        // <div className='bg-dark'>
-
-        // </div>
         <footer className="footer mt-auto py-3 bg-dark">
             <div className="container">
                 <div className='container d-flex flex-column justify-content-center text-center'>
@@ -16,7 +13,7 @@ const Footer = () => {
                         <Link to="https://github.com/iamarghamallick" target='_blank'><FontAwesomeIcon icon={faGithub} color='#cbcbcb' className='mx-1 h4' style={{borderRadius: "50%", padding: "8px"}}/></Link>
                         <Link to="https://www.linkedin.com/in/iamarghamallick/" target='_blank'><FontAwesomeIcon icon={faLinkedin} color='#cbcbcb' className='mx-1 h4' style={{borderRadius: "50%", padding: "8px"}}/></Link>
                     </div>
-                    {<h6>iNotebook &copy; {new Date().getFullYear()} | Made with MERN</h6>}
+                    {<p>iNotebook &copy; {new Date().getFullYear()} | Made with MERN</p>}
                 </div>
             </div>
         </footer>

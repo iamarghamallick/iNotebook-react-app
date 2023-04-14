@@ -52,7 +52,7 @@ const Login = (props) => {
                 </div>
 
                 <button type="submit" className="btn btn-primary">Login</button>
-                <p className='my-2'>Not an user? <Link to='/signup' className='text-warning'>Create an Account</Link></p>
+                <p className='my-2'>Not a user? <Link to='/signup' className='text-warning'>Create an Account</Link></p>
             </form>
         </div>
     )
